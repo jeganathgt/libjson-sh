@@ -18,8 +18,11 @@ Here is the example:
 ====================
 
 . ./include/jshn.sh
+
 json_init
+
     json_add_array "AP_Autoconfig_config"
+    
     json_add_object
         json_add_string "Radio_Id" "radioId"
         json_add_string "MAX_BSSID" "MAX_BSSID"
@@ -37,6 +40,7 @@ json_init
         json_add_string "channel_list" "36 40 44 48 52 56 60 64 100 104 108 112 116 132 136 140"
     json_close_object
     json_close_array
+    
 json_dump
 
 output:
