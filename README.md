@@ -20,6 +20,7 @@ Here is the example:
 . ./include/jshn.sh
 
 json_init "object"
+
     json_add_array "AP_Autoconfig_config"
 
     json_add_object
