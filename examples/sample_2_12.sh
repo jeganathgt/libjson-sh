@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./json_my_new.sh
+. ../include/jshn.sh
 
 var="array object"
 while :
@@ -9,7 +9,7 @@ for i in $var
 do
 json_init "$i"
 
-if [[ $i = "array" ]] ; then
+if [ "$i" = "array" ] ; then
 
 json_add_object
 
@@ -31,6 +31,7 @@ json_add_string "bandwidth" "20Mhz"
 json_add_string "channel" "1 2 3 4 5 6 7 8 9 10"
 json_close_array
 json_close_array
+
 json_close_object
 else
 json_add_object "radio_2G"
@@ -38,7 +39,7 @@ json_add_string "radio" "radio_2G"
 json_add_string "channel" "1 2 3 4"
 
 json_add_object "operating_class"
- json_add_string "class" "81"
+ json_add_int "class" 81
 
  json_add_object "supported_channels"
    json_add_string "channel_list" "1 2 3 4 5 6 7 8 9 10 11 12 13"
@@ -52,7 +53,6 @@ json_add_object "operating_class"
 json_close_object
 
 fi
-export -p
 json_dump
 sleep 1
 done

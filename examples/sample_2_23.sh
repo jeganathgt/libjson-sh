@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./json_my_new.sh
+. ../include/jshn.sh
 
 json_init "object"
 
