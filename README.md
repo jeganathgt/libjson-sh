@@ -14,6 +14,8 @@ The below are some of the well known library api:
 - json_add_array
 - json_close_array
 
+The below is the sample example, you can find lot more example in "examples" directory
+
 Here is the example:
 ====================
 
